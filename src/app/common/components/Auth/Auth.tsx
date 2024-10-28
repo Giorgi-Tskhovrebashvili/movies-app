@@ -2,7 +2,7 @@ import Button from "../Button/Button";
 import Input from "../Input/Input";
 import { auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
