@@ -1,10 +1,11 @@
+import { MainLayout } from '@/app/common/components'
 import React from 'react'
 
 const Movies = () => {
   return (
-    <div>
-      
-    </div>
+    <MainLayout>
+      Movies
+    </MainLayout>
   )
 }
 

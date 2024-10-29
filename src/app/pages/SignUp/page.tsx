@@ -1,10 +1,11 @@
+import { MainLayout } from '@/app/common/components'
 import React from 'react'
 
 const SignUp = () => {
   return (
-    <div>
-      
-    </div>
+    <MainLayout>
+      SignUp
+    </MainLayout>
   )
 }
 

@@ -1,10 +1,11 @@
+import { MainLayout } from '@/app/common/components'
 import React from 'react'
 
 const Bookmarks = () => {
   return (
-    <div>
-      
-    </div>
+    <MainLayout>
+      Bookmarks
+    </MainLayout>
   )
 }
 

@@ -5,7 +5,12 @@ const Header = () => {
   return (
     <div>
       <div>
-        <Image src={""} alt={""} />
+        <Image
+          src={"/assets/Movie.svg"}
+          alt={"Home-icon"}
+          width={32}
+          height={25.6}
+        />
         <ul>
           <li>
             <Link href="/Trending">
@@ -20,7 +25,7 @@ const Header = () => {
           <li>
             <Link href={"/Movies"}>
               <Image
-                src={"/assets/Movie.svg"}
+                src={"/assets/movies.svg"}
                 alt={"Movies-icon"}
                 width={20}
                 height={20}
@@ -49,6 +54,12 @@ const Header = () => {
           </li>
         </ul>
       </div>
+      <Image
+        src={"/assets/profile.svg"}
+        alt={"Profile-icon"}
+        width={40}
+        height={40}
+      />
     </div>
   );
 };

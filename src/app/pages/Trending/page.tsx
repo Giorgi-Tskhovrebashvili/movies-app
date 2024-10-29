@@ -1,10 +1,11 @@
+import { MainLayout } from '@/app/common/components'
 import React from 'react'
 
 const Trending = () => {
   return (
-    <div>
-      
-    </div>
+    <MainLayout>
+      Trending
+    </MainLayout>
   )
 }
 
