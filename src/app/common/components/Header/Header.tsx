@@ -5,15 +5,17 @@ const Header = () => {
   return (
     <div>
       <div>
-        <Image
-          src={"/assets/Movie.svg"}
-          alt={"Home-icon"}
-          width={32}
-          height={25.6}
-        />
+        <Link href={"/"} passHref>
+          <Image
+            src={"/assets/Movie.svg"}
+            alt={"Home-icon"}
+            width={32}
+            height={25.6}
+          />
+        </Link>
         <ul>
           <li>
-            <Link href="/Trending">
+            <Link href="/" passHref>
               <Image
                 src={"/assets/home-btn.svg"}
                 alt={"Trending-icon"}
@@ -23,7 +25,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href={"/Movies"}>
+            <Link href={"/pages/Movies"} passHref>
               <Image
                 src={"/assets/movies.svg"}
                 alt={"Movies-icon"}
@@ -33,7 +35,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href={"/TV-Series"}>
+            <Link href={"/pages/TV-Series"} passHref>
               <Image
                 src={"/assets/tv-series.svg"}
                 alt={"TV-Series-icon"}
@@ -43,7 +45,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href={"/Bookmarks"}>
+            <Link href={"/pages/Bookmarks"} passHref>
               <Image
                 src={"/assets/bookmark.svg"}
                 alt={"Bookmarks-icon"}

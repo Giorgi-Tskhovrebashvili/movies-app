@@ -2,7 +2,7 @@ import Button from "../Button/Button";
 import Input from "../Input/Input";
 import { auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ const Auth = () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
     } catch (error) {
-        console.error(error);
+      console.error(error);
     }
   };
 
@@ -22,13 +22,29 @@ const Auth = () => {
         type={"text"}
         placeholder={"Email"}
         onChange={(e) => setEmail(e.target.value)}
+        className={""}
+        value={""}
+        onBlur={function (event: ChangeEvent<HTMLInputElement>): void {
+          throw new Error("Function not implemented.");
+        }}
+        id={""}
+        name={""}
       />
       <Input
         type={"password"}
         placeholder={"Password"}
         onChange={(e) => setPassword(e.target.value)}
+        className={""}
+        value={""}
+        onBlur={function (event: ChangeEvent<HTMLInputElement>): void {
+          throw new Error("Function not implemented.");
+        }}
+        id={""}
+        name={""}
       />
-      <Button onClick={signIn}>Sign In</Button>
+      <Button onClick={signIn} className={""}>
+        Sign In
+      </Button>
     </div>
   );
 };
