@@ -2,6 +2,7 @@
 import { auth } from "./common/config/firebase";
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { MainLayout } from "./common/components";
 
 export default function Home() {
   const googleAuth = new GoogleAuthProvider();
@@ -25,16 +26,18 @@ export default function Home() {
 
   return (
     <main>
-      <h1>hello world</h1>
-      <button onClick={signInWithGoogle}>SignIn With Google</button>
-      {user ? (
-        <>
-          {user.displayName} - {user.email}{" "}
-          <button onClick={logOut}>Logout</button>
-        </>
-      ) : (
-        ""
-      )}
+      <MainLayout>
+        <h1>hello world</h1>
+        <button onClick={signInWithGoogle}>SignIn With Google</button>
+        {user ? (
+          <>
+            {user.displayName} - {user.email}{" "}
+            <button onClick={logOut}>Logout</button>
+          </>
+        ) : (
+          ""
+        )}
+      </MainLayout>
     </main>
   );
 }
