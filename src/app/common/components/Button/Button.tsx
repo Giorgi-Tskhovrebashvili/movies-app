@@ -1,12 +1,13 @@
 interface ButtonType {
   children: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   className: string;
+  type?: "submit" | undefined;
 }
 
-const Button = ({ children, onClick, className }: ButtonType) => {
+const Button = ({ children, onClick, className, type }: ButtonType) => {
   return (
-    <button onClick={onClick} className={className}>
+    <button onClick={onClick} className={className} type={type}>
       {children}
     </button>
   );
