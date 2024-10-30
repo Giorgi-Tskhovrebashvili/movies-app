@@ -4,7 +4,6 @@ import { LoginInValidationSchema } from "@/app/common/utils/validation-schema";
 import { useFormik } from "formik";
 import Image from "next/image";
 import Link from "next/link";
-import { ChangeEvent } from "react";
 
 const LogIn = () => {
   const formik = useFormik({
