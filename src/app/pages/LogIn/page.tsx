@@ -1,11 +1,33 @@
 "use client";
 import { Button, Input, MainLayout } from "@/app/common/components";
 import { LoginInValidationSchema } from "@/app/common/utils/validation-schema";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../common/config/firebase";
 import { useFormik } from "formik";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const LogIn = () => {
+  const router = useRouter();
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const logIn = async (email: string, password: string) => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (userCredential) {
+        router.push("/");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const formik = useFormik({
     initialValues: {
       email: "",

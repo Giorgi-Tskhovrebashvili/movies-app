@@ -4,8 +4,24 @@ import { RegisterValidationSchema } from "@/app/common/utils/validation-schema";
 import { useFormik } from "formik";
 import Link from "next/link";
 import Image from "next/image";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/app/common/config/firebase";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const SignUp = () => {
+  const router = useRouter();
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const signIn = async (email: string, password: string) => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      router.push("/login");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const formik = useFormik({
     initialValues: {
       email: "",
