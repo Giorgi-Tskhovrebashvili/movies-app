@@ -1,5 +1,5 @@
 "use client";
-import { Button, Input, MainLayout } from "@/app/common/components";
+import { Button, Input } from "@/app/common/components";
 import { RegisterValidationSchema } from "@/app/common/utils/validation-schema";
 import { useFormik } from "formik";
 import Link from "next/link";
@@ -16,9 +16,9 @@ const SignUp = () => {
   const signIn = async (email: string, password: string) => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      router.push("/login");
-    } catch (error) {
-      console.error(error);
+      router.push("/");
+    } catch (error: any) {
+      setErrorMessage(error.message);
     }
   };
 
@@ -26,17 +26,17 @@ const SignUp = () => {
     initialValues: {
       email: "",
       password: "",
-      repeatPassword: "",
+      confirmPassword: "",
     },
     validationSchema: RegisterValidationSchema,
     validateOnChange: true,
     validateOnBlur: true,
     onSubmit: (values) => {
-      if (values.password !== values.repeatPassword) {
+      if (values.password !== values.confirmPassword) {
         formik.setFieldError("repeatPassword", "Passwords do not match");
         return;
       }
-      values.email, values.password;
+      signIn(values.email, values.password);
     },
   });
 
@@ -44,7 +44,7 @@ const SignUp = () => {
     formik;
 
   return (
-    <MainLayout>
+    <div className="">
       <form onSubmit={handleSubmit}>
         <Image
           src={"/assets/Movie.svg"}
@@ -85,27 +85,28 @@ const SignUp = () => {
               className={""}
               type={"password"}
               placeholder={"Repeat Password"}
-              value={values.repeatPassword}
+              value={values.confirmPassword}
               onBlur={handleBlur}
-              id={"repeatpassword"}
-              name={"repeatpassword"}
+              id={"confirmPassword"}
+              name={"confirmPassword"}
               onChange={handleChange}
             />
-            {errors.repeatPassword && touched.repeatPassword && (
-              <div className={"text-red-500"}>{errors.repeatPassword}</div>
+            {errors.confirmPassword && touched.confirmPassword && (
+              <div className={"text-red-500"}>{errors.confirmPassword}</div>
             )}
           </div>
-          <div>
-            <Button className={""} type={"submit"}>
+          {errorMessage && <div className="text-red-500">{errorMessage}</div>}
+          <div className="flex flex-col">
+            <Button className={""} type="submit">
               Create an account
             </Button>
             <span>
-              Already have an account? <Link href={"/pages/Login"}>Login</Link>
+              Already have an account? <Link href={"/"}>Login</Link>
             </span>
           </div>
         </div>
       </form>
-    </MainLayout>
+    </div>
   );
 };
 

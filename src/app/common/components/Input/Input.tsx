@@ -1,12 +1,12 @@
 interface InputType {
   className: string;
-  type: "text" | "email" | "password";
+  type: "search" | "email" | "password";
   placeholder: string;
-  value: string;
-  onBlur: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   id: string;
   name: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input = ({

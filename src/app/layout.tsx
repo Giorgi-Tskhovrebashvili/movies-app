@@ -24,7 +24,7 @@ export default function RootLayout({
         <link
           rel="icon"
           type="image/svg+xml"
-          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5gpDGkul4kz7YIZ1KQgxQGDjt-bnrYJ1xXg&s"
+          href="https://img.freepik.com/free-vector/movie-cinema-icons_23-2147495008.jpg"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Movies App</title>

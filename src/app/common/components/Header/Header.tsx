@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div>
       <div>
-        <Link href={"/"} passHref>
+        <Link href={"/pages/Trending"} passHref>
           <Image
             src={"/assets/Movie.svg"}
             alt={"Home-icon"}
@@ -15,7 +15,7 @@ const Header = () => {
         </Link>
         <ul>
           <li>
-            <Link href="/" passHref>
+            <Link href="/pages/Trending" passHref>
               <Image
                 src={"/assets/home-btn.svg"}
                 alt={"Trending-icon"}

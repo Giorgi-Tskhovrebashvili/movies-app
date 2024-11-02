@@ -1,43 +1,8 @@
 "use client";
-import { auth } from "./common/config/firebase";
-import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { MainLayout } from "./common/components";
+import LogIn from "./pages/LogIn/page";
 
 export default function Home() {
-  const googleAuth = new GoogleAuthProvider();
-  const [user, setUser] = useAuthState(auth);
-
-  const signInWithGoogle = async () => {
-    try {
-      await signInWithPopup(auth, googleAuth);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const logOut = async () => {
-    try {
-      await signOut(auth);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   return (
-    <main>
-      <MainLayout>
-        <h1>hello world</h1>
-        <button onClick={signInWithGoogle}>SignIn With Google</button>
-        {user ? (
-          <>
-            {user.displayName} - {user.email}{" "}
-            <button onClick={logOut}>Logout</button>
-          </>
-        ) : (
-          ""
-        )}
-      </MainLayout>
-    </main>
+    <LogIn />
   );
 }
