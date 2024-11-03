@@ -1,13 +1,4 @@
-interface InputType {
-  className: string;
-  type: "search" | "email" | "password";
-  placeholder: string;
-  value?: string;
-  onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  id: string;
-  name: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
+import { InputType } from "../../types";
 
 const Input = ({
   type,

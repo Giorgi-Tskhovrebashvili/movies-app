@@ -1,14 +1,5 @@
 import { useEffect, useState } from "react";
-
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string | null;
-}
-
-interface MovieData {
-  results: Movie[];
-}
+import { MovieData } from "../types";
 
 const useFetch = (url: string) => {
   const [movieData, setMovieData] = useState<MovieData | null>(null);
