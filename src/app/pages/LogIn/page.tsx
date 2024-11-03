@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { FirebaseError } from "firebase/app";
 
 const LogIn = () => {
   const router = useRouter();
@@ -24,7 +25,25 @@ const LogIn = () => {
         router.push("/pages/Trending");
       }
     } catch (error: any) {
-      setErrorMessage(error.message);
+      if (error instanceof FirebaseError) {
+        switch (error.code) {
+          case "auth/user-not-found":
+            setErrorMessage("No user found with this email.");
+            break;
+          case "auth/wrong-password":
+            setErrorMessage("Incorrect password. Please try again.");
+            break;
+          case "auth/invalid-email":
+            setErrorMessage("The email address is badly formatted.");
+            break;
+          default:
+            setErrorMessage(
+              "An error occurred during login. Please try again."
+            );
+        }
+      } else {
+        setErrorMessage("An unexpected error occurred.");
+      }
     }
   };
 
@@ -44,6 +63,10 @@ const LogIn = () => {
   const { values, handleBlur, handleSubmit, handleChange, errors, touched } =
     formik;
 
+  const inputStyle =
+    "bg-transparent w-[279px] h-[37px] px-[16px] pb-[18px] outline-none border-b-[1px] " +
+    "focus:border-b-white caret-red text-[15px] placeholder:opacity-50 md:w-[336px]";
+
   return (
     <div className="flex justify-center items-center w-[375px] min-h-screen m-auto md:w-[768px] xl:w-[1440px]">
       <form
@@ -62,11 +85,11 @@ const LogIn = () => {
           </h2>
           <div className="flex flex-col gap-[24px] relative">
             <Input
-              className={`bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] ${
+              className={`${inputStyle} ${
                 errors.email && touched.email
                   ? "border-b-red"
                   : "border-b-[grey]"
-              } focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]`}
+              }`}
               type={"email"}
               placeholder={"Email address"}
               value={values.email}
@@ -81,11 +104,11 @@ const LogIn = () => {
               </div>
             )}
             <Input
-              className={`bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] ${
+              className={`${inputStyle} ${
                 errors.email && touched.email
                   ? "border-b-red"
                   : "border-b-[grey]"
-              } focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]`}
+              }`}
               type={"password"}
               placeholder={"Password"}
               value={values.password}

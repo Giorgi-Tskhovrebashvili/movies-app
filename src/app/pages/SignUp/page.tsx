@@ -8,6 +8,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/app/common/config/firebase";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { FirebaseError } from "firebase/app";
 
 const SignUp = () => {
   const router = useRouter();
@@ -18,7 +19,25 @@ const SignUp = () => {
       await createUserWithEmailAndPassword(auth, email, password);
       router.push("/");
     } catch (error: any) {
-      setErrorMessage(error.message);
+      if (error instanceof FirebaseError) {
+        switch (error.code) {
+          case "auth/invalid-email":
+            setErrorMessage("The email address is badly formatted.");
+            break;
+          case "auth/email-already-in-use":
+            setErrorMessage(
+              "This email is already in use. Please try another one."
+            );
+            break;
+          default:
+            setErrorMessage(
+              "An error occurred during sign-up. Please try again."
+            );
+            break;
+        }
+      } else {
+        setErrorMessage("An unexpected error occurred.");
+      }
     }
   };
 
@@ -43,6 +62,10 @@ const SignUp = () => {
   const { values, handleBlur, handleSubmit, handleChange, errors, touched } =
     formik;
 
+  const inputStyle =
+    "bg-transparent w-[279px] h-[37px] px-[16px] pb-[18px] outline-none border-b-[1px] " +
+    "focus:border-b-white caret-red text-[15px] placeholder:opacity-50 md:w-[336px]";
+
   return (
     <div className="flex justify-center items-center w-[375px] min-h-screen m-auto md:w-[768px] xl:w-[1440px]">
       <form
@@ -61,11 +84,11 @@ const SignUp = () => {
           </h2>
           <div className="flex flex-col gap-[24px] relative">
             <Input
-              className={`bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] ${
+              className={`${inputStyle} ${
                 errors.email && touched.email
                   ? "border-b-red"
                   : "border-b-[grey]"
-              } focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]`}
+              }`}
               type={"email"}
               placeholder={"Email address"}
               value={values.email}
@@ -80,11 +103,11 @@ const SignUp = () => {
               </div>
             )}
             <Input
-              className={`bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] ${
+              className={`${inputStyle} ${
                 errors.email && touched.email
                   ? "border-b-red"
                   : "border-b-[grey]"
-              } focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]`}
+              }`}
               type={"password"}
               placeholder={"Password"}
               value={values.password}
@@ -99,11 +122,11 @@ const SignUp = () => {
               </div>
             )}
             <Input
-              className={`bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] ${
+              className={`${inputStyle} ${
                 errors.email && touched.email
                   ? "border-b-red"
                   : "border-b-[grey]"
-              } focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]`}
+              }`}
               type={"password"}
               placeholder={"Repeat Password"}
               value={values.confirmPassword}
