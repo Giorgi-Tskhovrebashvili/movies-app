@@ -57,10 +57,16 @@ const LogIn = () => {
           height={25.6}
         />
         <div className="flex flex-col gap-[40px] w-[327px] h-[365px] bg-blue rounded-[10px] shrink-0 p-[24px] md:w-[400px] md:h-[373px] md:rounded-[20px] md:p-[32px]">
-          <h1 className="h-[40px] text-[32px] not-italic font-normal leading-normal tracking-tightest">Login</h1>
-          <div className="flex flex-col gap-[24px]">
+          <h2 className="h-[40px] text-[32px] not-italic font-normal leading-normal tracking-tightest">
+            Login
+          </h2>
+          <div className="flex flex-col gap-[24px] relative">
             <Input
-              className={"bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]"}
+              className={`bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] ${
+                errors.email && touched.email
+                  ? "border-b-red"
+                  : "border-b-[grey]"
+              } focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]`}
               type={"email"}
               placeholder={"Email address"}
               value={values.email}
@@ -70,10 +76,16 @@ const LogIn = () => {
               onChange={handleChange}
             />
             {errors.email && touched.email && (
-              <div className={"text-red-500"}>{errors.email}</div>
+              <div className={"text-red absolute top-[-2px] right-0"}>
+                {errors.email}
+              </div>
             )}
             <Input
-              className={"bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]"}
+              className={`bg-transparent w-[279px] h-[37px] shrink-0 px-[16px] pb-[18px] outline-none border-b-[1px] border-b-[grey] ${
+                errors.email && touched.email
+                  ? "border-b-red"
+                  : "border-b-[grey]"
+              } focus:border-b-[1px] focus:border-b-white caret-red text-[15px] not-italic font-normal leading-normal placeholder:opacity-50 md:w-[336px]`}
               type={"password"}
               placeholder={"Password"}
               value={values.password}
@@ -83,16 +95,26 @@ const LogIn = () => {
               onChange={handleChange}
             />
             {errors.password && touched.password && (
-              <div className={"text-red-500"}>{errors.password}</div>
+              <div className={"text-red absolute top-[56px] right-0"}>
+                {errors.password}
+              </div>
             )}
           </div>
           {errorMessage && <div className="text-red-500">{errorMessage}</div>}
           <div className="flex flex-col items-center gap-[24px]">
-            <Button className={"w-[279px] h-[48px] shrink-0 rounded-[6px] bg-red text-center text-[15px] not-italic font-normal leading-normal md:w-[336px]"} type={"submit"}>
+            <Button
+              className={
+                "w-[279px] h-[48px] shrink-0 rounded-[6px] bg-red hover:bg-white hover:text-blue text-center text-[15px] not-italic font-normal leading-normal md:w-[336px]"
+              }
+              type={"submit"}
+            >
               Login to your account
             </Button>
             <span className="flex justify-center items-start gap-[9px] w-[216px] h-[19px] text-[15px] not-italic font-normal leading-normal">
-              Don’t have an account? <Link href={"/pages/SignUp"} className="text-red">Sign Up</Link>
+              Don’t have an account?{" "}
+              <Link href={"/pages/SignUp"} className="text-red">
+                Sign Up
+              </Link>
             </span>
           </div>
         </div>
