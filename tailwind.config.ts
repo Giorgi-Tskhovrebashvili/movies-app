@@ -15,6 +15,9 @@ const config: Config = {
         gray: "#5A698F",
         blue: "#161D2F",
       },
+      opacity: {
+        '49': '0.4979',
+      },
     },
   },
   plugins: [],
