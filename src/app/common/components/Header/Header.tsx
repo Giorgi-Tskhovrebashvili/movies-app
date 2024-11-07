@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center m-auto p-[18px] w-[375px] h-[56px] flex-shrink-0 bg-blue md:w-[719px] md:h-[72px] md:p-[20px] md:rounded-[10px] xl:flex-col xl:justify-normal xl:w-[96px] xl:h-[960px] xl:px-[28px] xl:py-[32px] xl:rounded-[20px] xl:gap-[75px]">
+    <div className="flex justify-between items-center m-auto p-[18px] w-[375px] h-[56px] flex-shrink-0 bg-blue md:w-[719px] md:h-[72px] md:p-[20px] md:rounded-[10px] xl:flex-col xl:justify-normal xl:w-[96px] xl:h-[960px] xl:m-0 xl:px-[28px] xl:py-[32px] xl:rounded-[20px] xl:gap-[75px]">
       <Link href={"/pages/Trending"} passHref>
         <Image
-          src={"/assets/Movie.svg"}
+          src={"/assets/images/Movie.svg"}
           alt={"Home-icon"}
           width={32}
           height={25.6}
@@ -17,7 +17,7 @@ const Header = () => {
         <li>
           <Link href="/pages/Trending" passHref>
             <Image
-              src={"/assets/home-btn.svg"}
+              src={"/assets/images/home-btn.svg"}
               alt={"Trending-icon"}
               width={20}
               height={20}
@@ -27,7 +27,7 @@ const Header = () => {
         <li>
           <Link href={"/pages/Movies"} passHref>
             <Image
-              src={"/assets/movies.svg"}
+              src={"/assets/images/movies.svg"}
               alt={"Movies-icon"}
               width={20}
               height={20}
@@ -37,7 +37,7 @@ const Header = () => {
         <li>
           <Link href={"/pages/TV-Series"} passHref>
             <Image
-              src={"/assets/tv-series.svg"}
+              src={"/assets/images/tv-series.svg"}
               alt={"TV-Series-icon"}
               width={20}
               height={20}
@@ -47,7 +47,7 @@ const Header = () => {
         <li>
           <Link href={"/pages/Bookmarks"} passHref>
             <Image
-              src={"/assets/bookmark.svg"}
+              src={"/assets/images/bookmark.svg"}
               alt={"Bookmarks-icon"}
               width={20}
               height={20}
@@ -56,7 +56,7 @@ const Header = () => {
         </li>
       </ul>
       <Image
-        src={"/assets/profile.svg"}
+        src={"/assets/images/profile.svg"}
         alt={"Profile-icon"}
         width={40}
         height={40}

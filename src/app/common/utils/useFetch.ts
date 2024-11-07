@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
-import { MovieData } from "../types";
+import { MovieInfo } from "../types";
 
-const useFetch = (url: string) => {
-  const [movieData, setMovieData] = useState<MovieData | null>(null);
+const useFetch = () => {
+  const [movies, setMovies] = useState<MovieInfo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url);
+        const response = await fetch("/data.json");
         if (!response.ok)
           throw new Error(`Error fetching data: ${response.statusText}`);
 
         const result = await response.json();
-        setMovieData(result);
+        console.log(result);
+
+        setMovies(result as MovieInfo[]);
       } catch (error) {
         setError(error as Error);
       } finally {
@@ -23,10 +25,10 @@ const useFetch = (url: string) => {
     };
 
     fetchData();
-  }, [url]);
+  }, []);
 
   return {
-    movieData,
+    movies,
     loading,
     error,
   };

@@ -4,3 +4,5 @@ export { default as Input } from "./Input/Input";
 export { default as MainLayout } from "./Layouts/MainLayout";
 export { default as Loader } from "./Loader/Loader";
 export { default as SubmitError } from "./Messages/SubmitError";
+export { default as Recomended } from "./Recomended/Recomended";
+export { default as Trending } from "./Trending/Trending";

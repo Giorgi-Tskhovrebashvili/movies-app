@@ -20,12 +20,28 @@ export interface InputType {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export interface Movie {
-  id: number;
-  title: string;
-  poster_path: string | null;
+export interface MovieImages {
+  small: string;
+  medium: string;
+  large: string;
 }
 
-export interface MovieData {
-  results: Movie[];
+export interface MovieInfo {
+  id: number;
+  title: string;
+  categoryIcon: string;
+  image: MovieImages;
+  year: number;
+  category: string;
+  rating: string;
+  isBookmarked: boolean;
+  isTrending: boolean;
+}
+
+export interface RecomendedTypes {
+  movieData: MovieInfo[];
+}
+
+export interface TrendingMovie {
+  trend: MovieInfo[];
 }
