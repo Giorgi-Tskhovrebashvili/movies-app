@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main>
       <MainLayout>
-        <div className="flex flex-col gap-[24px] px-[16px] w-[375px] m-auto min-h-[100vh] md:w-[768px] md:px-[20px] md:gap-[35px] xl:w-[1440px] xl:py-[25px] xl:m-0 xl:gap-[40px]">
+        <div className="flex flex-col gap-[24px] px-[16px] w-[375px] m-auto h-[100vh] overflow-y-scroll md:w-[768px] md:px-[20px] md:gap-[35px] xl:w-[1440px] xl:py-[25px] xl:m-0 xl:gap-[35px]">
           <div className="flex gap-[16px] w-[254px] h-[24px] md:gap-[24px] md:w-[377px] md:h-[32px]">
             <Image
               src={"/assets/images/search.svg"}
