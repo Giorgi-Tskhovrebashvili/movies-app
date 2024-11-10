@@ -74,7 +74,7 @@ const LogIn = () => {
         className="flex flex-col items-center px-[24px] pt-[48px] pb-[170px] gap-[58.5px] md:px-[184px] md:pt-[80px] md:pb-[473px] md:gap-[72.5px] xl:px-0 xl:pt-[78.5px] xl:pb-[250px] xl:gap-[83px]"
       >
         <Image
-          src={"/assets/Movie.svg"}
+          src={"/assets/images/Movie.svg"}
           alt={"Home-icon"}
           width={32}
           height={25.6}

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="flex justify-between items-center m-auto p-[18px] w-[375px] h-[56px] flex-shrink-0 bg-blue md:w-[719px] md:h-[72px] md:p-[20px] md:rounded-[10px] xl:flex-col xl:justify-normal xl:w-[96px] xl:h-[960px] xl:m-0 xl:px-[0px] xl:py-[32px] xl:rounded-[20px] xl:gap-[75px]">
+    <div className="flex justify-between items-center m-auto p-[18px] w-[375px] h-[56px] flex-shrink-0 bg-blue md:w-[719px] md:h-[72px] md:p-[20px] md:rounded-[10px] xl:flex-col xl:justify-normal xl:w-[96px] xl:h-auto xl:m-0 xl:px-[0px] xl:py-[32px] xl:rounded-[20px] xl:gap-[75px]">
       <Link href={"/pages/Trending"} passHref>
         <Image
           src={"/assets/images/Movie.svg"}

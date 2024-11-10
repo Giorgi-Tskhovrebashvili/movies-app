@@ -9,11 +9,6 @@ import {
 } from "@/app/common/components";
 import useFetch from "@/app/common/utils/useFetch";
 import Image from "next/image";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 export default function Home() {
   const { movies, loading, error } = useFetch();
@@ -24,7 +19,7 @@ export default function Home() {
   return (
     <main>
       <MainLayout>
-        <div className="flex flex-col gap-[24px] px-[16px] w-[375px] m-auto h-[100vh] overflow-y-scroll md:w-[768px] md:px-[20px] md:gap-[35px] xl:w-[1440px] xl:py-[25px] xl:m-0 xl:gap-[35px]">
+        <div className="flex flex-col gap-[24px] px-[16px] w-[375px] m-auto h-[100vh] overflow-y-auto scrollbar-hide md:w-[768px] md:px-[20px] md:gap-[35px] xl:w-[1440px] xl:py-[25px] xl:m-0 xl:gap-[35px]">
           <div className="flex gap-[16px] w-[254px] h-[24px] md:gap-[24px] md:w-[377px] md:h-[32px]">
             <Image
               src={"/assets/images/search.svg"}
