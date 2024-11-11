@@ -45,3 +45,14 @@ export interface RecomendedTypes {
 export interface TrendingMovie {
   trend: MovieInfo[];
 }
+
+export interface SearchType {
+  placeholder: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface BookmarkType {
+  movies: MovieInfo[];
+  category: "Movie" | "TV Series";
+  title: string;
+}

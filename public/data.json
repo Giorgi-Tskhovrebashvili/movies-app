@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Beyond Earth",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/beyond-earth/small.jpg",
       "large": "/assets/images/MovieImages/beyond-earth/large.jpg"
@@ -16,7 +16,7 @@
   {
     "id": 2,
     "title": "Bottom Gear",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/bottom-gear/small.jpg",
       "large": "/assets/images/MovieImages/bottom-gear/large.jpg"
@@ -30,7 +30,7 @@
   {
     "id": 3,
     "title": "Undiscovered Cities",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/undiscovered-cities/small.jpg",
       "large": "/assets/images/MovieImages/undiscovered-cities/large.jpg"
@@ -44,7 +44,7 @@
   {
     "id": 4,
     "title": "1998",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/1998/small.jpg",
       "large": "/assets/images/MovieImages/1998/large.jpg"
@@ -58,7 +58,7 @@
   {
     "id": 5,
     "title": "Dark Side of the Moon",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/dark-side-of-the-moon/small.jpg",
       "large": "/assets/images/MovieImages/dark-side-of-the-moon/large.jpg"
@@ -72,7 +72,7 @@
   {
     "id": 6,
     "title": "The Great Lands",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/the-great-lands/small.jpg",
       "large": "/assets/images/MovieImages/the-great-lands/large.jpg"
@@ -86,7 +86,7 @@
   {
     "id": 7,
     "title": "The Diary",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/the-dairy/small.jpg",
       "large": "/assets/images/MovieImages/the-dairy/large.jpg"
@@ -100,7 +100,7 @@
   {
     "id": 8,
     "title": "Earth’s Untouched",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/earths-untouched/small.jpg",
       "large": "/assets/images/MovieImages/earths-untouched/large.jpg"
@@ -114,7 +114,7 @@
   {
     "id": 9,
     "title": "No Land Beyond",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/no-land-beyond/small.jpg",
       "large": "/assets/images/MovieImages/no-land-beyond/large.jpg"
@@ -128,7 +128,7 @@
   {
     "id": 10,
     "title": "During the Hunt",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/during-the-hunt/small.jpg",
       "large": "/assets/images/MovieImages/during-the-hunt/large.jpg"
@@ -142,7 +142,7 @@
   {
     "id": 11,
     "title": "Autosport the Series",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/autosport-the-series/small.jpg",
       "large": "/assets/images/MovieImages/autosport-the-series/large.jpg"
@@ -156,7 +156,7 @@
   {
     "id": 12,
     "title": "Same Answer II",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/same-answer-2/small.jpg",
       "large": "/assets/images/MovieImages/same-answer-2/large.jpg"
@@ -170,7 +170,7 @@
   {
     "id": 13,
     "title": "Below Echo",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/below-echo/small.jpg",
       "large": "/assets/images/MovieImages/below-echo/large.jpg"
@@ -184,7 +184,7 @@
   {
     "id": 14,
     "title": "The Rockies",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/the-rockies/small.jpg",
       "large": "/assets/images/MovieImages/the-rockies/large.jpg"
@@ -198,7 +198,7 @@
   {
     "id": 15,
     "title": "Relentless",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/relentless/small.jpg",
       "large": "/assets/images/MovieImages/relentless/large.jpg"
@@ -212,7 +212,7 @@
   {
     "id": 16,
     "title": "Community of Ours",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/community-of-ours/small.jpg",
       "large": "/assets/images/MovieImages/community-of-ours/large.jpg"
@@ -226,7 +226,7 @@
   {
     "id": 17,
     "title": "Van Life",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/van-life/small.jpg",
       "large": "/assets/images/MovieImages/van-life/large.jpg"
@@ -240,7 +240,7 @@
   {
     "id": 18,
     "title": "The Heiress",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/the-heiress/small.jpg",
       "large": "/assets/images/MovieImages/the-heiress/large.jpg"
@@ -254,7 +254,7 @@
   {
     "id": 19,
     "title": "Off the Track",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/off-the-track/small.jpg",
       "large": "/assets/images/MovieImages/off-the-track/large.jpg"
@@ -268,7 +268,7 @@
   {
     "id": 20,
     "title": "Whispering Hill",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/whispering-hill/small.jpg",
       "large": "/assets/images/MovieImages/whispering-hill/large.jpg"
@@ -282,7 +282,7 @@
   {
     "id": 21,
     "title": "112",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/112/small.jpg",
       "large": "/assets/images/MovieImages/112/large.jpg"
@@ -296,7 +296,7 @@
   {
     "id": 22,
     "title": "Lone Heart",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/lone-heart/small.jpg",
       "large": "/assets/images/MovieImages/lone-heart/large.jpg"
@@ -310,7 +310,7 @@
   {
     "id": 23,
     "title": "Production Line",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/production-line/small.jpg",
       "large": "/assets/images/MovieImages/production-line/large.jpg"
@@ -324,7 +324,7 @@
   {
     "id": 24,
     "title": "Dogs",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/dogs/small.jpg",
       "large": "/assets/images/MovieImages/dogs/large.jpg"
@@ -338,7 +338,7 @@
   {
     "id": 25,
     "title": "Asia in 24 Days",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/asia-in-24-days/small.jpg",
       "large": "/assets/images/MovieImages/asia-in-24-days/large.jpg"
@@ -352,7 +352,7 @@
   {
     "id": 26,
     "title": "The Tasty Tour",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/the-tasty-tour/small.jpg",
       "large": "/assets/images/MovieImages/the-tasty-tour/large.jpg"
@@ -366,7 +366,7 @@
   {
     "id": 27,
     "title": "Darker",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/darker/small.jpg",
       "large": "/assets/images/MovieImages/darker/large.jpg"
@@ -380,7 +380,7 @@
   {
     "id": 28,
     "title": "Unresolved Cases",
-    "categoryIcon": "/assets/Images/tv-series.svg",
+    "categoryIcon": "/assets/Images/tv-series-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/unresolved-cases/small.jpg",
       "large": "/assets/images/MovieImages/unresolved-cases/large.jpg"
@@ -394,7 +394,7 @@
   {
     "id": 29,
     "title": "Mission: Saturn",
-    "categoryIcon": "/assets/Images/movies.svg",
+    "categoryIcon": "/assets/Images/movies-focus.svg",
     "image": {
       "small": "/assets/images/MovieImages/mission-saturn/small.jpg",
       "large": "/assets/images/MovieImages/mission-saturn/large.jpg"

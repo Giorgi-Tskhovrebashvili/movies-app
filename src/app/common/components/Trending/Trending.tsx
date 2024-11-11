@@ -17,9 +17,7 @@ const Trending = ({ trend }: TrendingMovie) => {
         slidesPerView={1.5}
         spaceBetween={30}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
+        pagination={false}
         navigation={true}
         modules={[Keyboard, Pagination, Navigation]}
         breakpoints={{
@@ -27,47 +25,49 @@ const Trending = ({ trend }: TrendingMovie) => {
         }}
         className="w-[359px] md:w-[743px] xl:w-[1276px]"
       >
-        {trend.slice(0, 5).map((movie) => {
-          return (
-            <SwiperSlide key={movie.id}>
-              <div className="flex flex-col">
+        {trend
+          .filter((item) => item.isTrending === true)
+          .map((movie) => {
+            return (
+              <SwiperSlide key={movie.id} className="relative">
                 <Image
                   src={movie.image.large}
                   alt={movie.title}
                   width={240}
                   height={140}
-                  className="w-[240px] h-[140px] md:w-[470px] md:h-[230px]"
+                  className="w-[240px] h-[140px] md:w-[470px] md:h-[230px] rounded-[8px]"
                 />
-                <div className="flex gap-[8px]">
-                  <p>{movie.year}</p>
-                  <Image
-                    src={"/assets/images/Dot.svg"}
-                    alt={"."}
-                    width={3}
-                    height={3}
-                  />
-                  <div className="flex">
+                <div className="flex flex-col absolute bottom-[24px] left-[24px]">
+                  <div className="flex gap-[8px]">
+                    <p>{movie.year}</p>
                     <Image
-                      src={movie.categoryIcon}
-                      alt={movie.category}
-                      width={12}
-                      height={12}
+                      src={"/assets/images/Dot.svg"}
+                      alt={"dot separator"}
+                      width={3}
+                      height={3}
                     />
-                    <p>{movie.category}</p>
+                    <div className="flex gap-[4px] md:gap-[6px]">
+                      <Image
+                        src={movie.categoryIcon}
+                        alt={movie.category}
+                        width={12}
+                        height={12}
+                      />
+                      <p>{movie.category}</p>
+                    </div>
+                    <Image
+                      src={"/assets/images/Dot.svg"}
+                      alt={"dot separator"}
+                      width={3}
+                      height={3}
+                    />
+                    <p>{movie.rating}</p>
                   </div>
-                  <Image
-                    src={"/assets/images/Dot.svg"}
-                    alt={"."}
-                    width={3}
-                    height={3}
-                  />
-                  <p>{movie.rating}</p>
+                  <h3 className="text-[15px] not-italic font-normal leading-normal md:text-[24px]">{movie.title}</h3>
                 </div>
-              </div>
-              <h3>{movie.title}</h3>
-            </SwiperSlide>
-          );
-        })}
+              </SwiperSlide>
+            );
+          })}
       </Swiper>
     </div>
   );

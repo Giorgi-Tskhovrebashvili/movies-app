@@ -22,7 +22,7 @@ const Recomended = ({ movieData }: RecomendedTypes) => {
                 alt={movie.title}
                 width={164}
                 height={110}
-                className="w-[164px] h-[110px] md:w-[220px] md:h-[140px] xl:w-[280px] xl:h-[174px]"
+                className="w-[164px] h-[110px] md:w-[220px] md:h-[140px] xl:w-[280px] xl:h-[174px] rounded-[8px]"
               />
               <div className="flex flex-col gap-[5px]">
                 <div className="flex gap-[6px] md:gap-[8px]">
@@ -31,7 +31,7 @@ const Recomended = ({ movieData }: RecomendedTypes) => {
                   </p>
                   <Image
                     src={"/assets/images/Dot.svg"}
-                    alt={"."}
+                    alt={"dot separator"}
                     width={3}
                     height={3}
                   />
@@ -48,7 +48,7 @@ const Recomended = ({ movieData }: RecomendedTypes) => {
                   </div>
                   <Image
                     src={"/assets/images/Dot.svg"}
-                    alt={"."}
+                    alt={"dot separator"}
                     width={3}
                     height={3}
                   />

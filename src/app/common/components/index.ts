@@ -6,3 +6,6 @@ export { default as Loader } from "./Loader/Loader";
 export { default as SubmitError } from "./Messages/SubmitError";
 export { default as Recomended } from "./Recomended/Recomended";
 export { default as Trending } from "./Trending/Trending";
+export { default as Search } from "./Search/Search";
+export { default as BookmarkComponent } from "./BookmarkComponent/BookmarkComponent";
+export { default as ComponentForPages } from "./ComponentForPages/ComponentForPages";
