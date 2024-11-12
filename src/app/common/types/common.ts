@@ -56,3 +56,8 @@ export interface BookmarkType {
   category: "Movie" | "TV Series";
   title: string;
 }
+
+export interface IconType {
+  fill: string;
+  className: string;
+}

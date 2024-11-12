@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BookmarkType } from "../../types";
+import { DotIcon } from "../../../../../public/assets";
 
 const ComponentForPages = ({ movies, category, title }: BookmarkType) => {
   return (
@@ -21,16 +22,11 @@ const ComponentForPages = ({ movies, category, title }: BookmarkType) => {
                   className="w-[164px] h-[110px] md:w-[220px] md:h-[140px] xl:w-[280px] xl:h-[174px] rounded-[8px]"
                 />
                 <div className="flex flex-col gap-[5px]">
-                  <div className="flex gap-[6px] md:gap-[8px]">
+                  <div className="flex items-center gap-[6px] md:gap-[8px]">
                     <p className="opacity-75 text-[11px] not-italic font-normal leading-normal md:text-[13px]">
                       {movie.year}
                     </p>
-                    <Image
-                      src={"/assets/images/Dot.svg"}
-                      alt={"dot separator"}
-                      width={3}
-                      height={3}
-                    />
+                    <DotIcon />
                     <div className="flex gap-[4px] md:gap-[6px]">
                       <Image
                         src={movie.categoryIcon}
@@ -42,12 +38,7 @@ const ComponentForPages = ({ movies, category, title }: BookmarkType) => {
                         {movie.category}
                       </p>
                     </div>
-                    <Image
-                      src={"/assets/images/Dot.svg"}
-                      alt={"dot separator"}
-                      width={3}
-                      height={3}
-                    />
+                    <DotIcon />
                     <p className="opacity-75 text-[11px] not-italic font-normal leading-normal md:text-[13px]">
                       {movie.rating}
                     </p>

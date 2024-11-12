@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Keyboard } from "swiper/modules";
+import { DotIcon } from "../../../../../public/assets";
 
 const Trending = ({ trend }: TrendingMovie) => {
   return (
@@ -38,14 +39,9 @@ const Trending = ({ trend }: TrendingMovie) => {
                   className="w-[240px] h-[140px] md:w-[470px] md:h-[230px] rounded-[8px]"
                 />
                 <div className="flex flex-col absolute bottom-[24px] left-[24px]">
-                  <div className="flex gap-[8px]">
+                  <div className="flex items-center gap-[8px]">
                     <p>{movie.year}</p>
-                    <Image
-                      src={"/assets/images/Dot.svg"}
-                      alt={"dot separator"}
-                      width={3}
-                      height={3}
-                    />
+                    <DotIcon />
                     <div className="flex gap-[4px] md:gap-[6px]">
                       <Image
                         src={movie.categoryIcon}
@@ -55,12 +51,7 @@ const Trending = ({ trend }: TrendingMovie) => {
                       />
                       <p>{movie.category}</p>
                     </div>
-                    <Image
-                      src={"/assets/images/Dot.svg"}
-                      alt={"dot separator"}
-                      width={3}
-                      height={3}
-                    />
+                    <DotIcon />
                     <p>{movie.rating}</p>
                   </div>
                   <h3 className="text-[15px] not-italic font-normal leading-normal md:text-[24px]">{movie.title}</h3>
