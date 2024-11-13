@@ -1,8 +1,13 @@
 import Image from "next/image";
 import { RecomendedTypes } from "../../types";
-import { DotIcon } from "../../../../../public/assets";
+import {
+  BookmarkButtonIcon,
+  DotIcon,
+  PlayIcon,
+} from "../../../../../public/assets";
+import { Button } from "..";
 
-const Recomended = ({ movieData }: RecomendedTypes) => {
+const Recomended = ({ movieData, onClick }: RecomendedTypes) => {
   const filteredMovies = movieData.filter((movie) => movie.id >= 6);
 
   if (filteredMovies.length === 0) {
@@ -18,13 +23,33 @@ const Recomended = ({ movieData }: RecomendedTypes) => {
         {filteredMovies.map((movie) => {
           return (
             <div key={movie.id} className="flex flex-col gap-[8px]">
-              <Image
-                src={movie.image.small}
-                alt={movie.title}
-                width={164}
-                height={110}
-                className="w-[164px] h-[110px] md:w-[220px] md:h-[140px] xl:w-[280px] xl:h-[174px] rounded-[8px]"
-              />
+              <div className="relative group w-[164px] h-[110px] md:w-[220px] md:h-[140px] xl:w-[280px] xl:h-[174px] rounded-[8px] overflow-hidden cursor-pointer">
+                <Image
+                  src={movie.image.small}
+                  alt={movie.title}
+                  width={164}
+                  height={110}
+                  className="w-full h-full object-cover"
+                />
+                <Button
+                  className={"absolute top-[16px] right-[16px] z-[9999]"}
+                  onClick={onClick}
+                >
+                  <BookmarkButtonIcon
+                    fill={movie.isBookmarked ? "#FFFFFF" : "none"}
+                    className={""}
+                  />
+                </Button>
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.5)] bg-lightgray bg-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="xl:w-[117px] xl:h-[48px] xl:opacity-25 bg-white flex items-center justify-center xl:rounded-[28.5px]"></div>
+                  <div className="absolute top--[91px] flex items-center gap-[19px]">
+                    <PlayIcon fill="#FFFFFF" className="" />
+                    <p className="text-[18px] not-italic font-normal leading-normal">
+                      Play
+                    </p>
+                  </div>
+                </div>
+              </div>
               <div className="flex flex-col gap-[5px]">
                 <div className="flex items-center gap-[6px] md:gap-[8px]">
                   <p className="opacity-75 text-[11px] not-italic font-normal leading-normal md:text-[13px]">

@@ -4,7 +4,7 @@ import { SearchType } from "../../types";
 
 const Search = ({ placeholder, onChange }: SearchType) => {
   return (
-    <div className="flex gap-[16px] h-[24px] md:gap-[24px]">
+    <div className="flex items-center gap-[16px] h-[24px] md:gap-[24px]">
       <Image
         src={"/assets/images/search.svg"}
         alt={"search-icon"}
@@ -14,7 +14,7 @@ const Search = ({ placeholder, onChange }: SearchType) => {
       />
       <Input
         className={
-          "bg-transparent placeholder:opacity-49 w-[100%] text-[16px] not-italic font-normal leading-normal outline-none md:text-[24px] "
+          "bg-transparent placeholder:opacity-49 w-[100%] text-[16px] not-italic font-normal leading-normal outline-none md:text-[24px] xl:focus:border-b-gray xl:focus:border-b-[1px] xl:h-[50px] xl:focus:mb-1"
         }
         type={"search"}
         placeholder={placeholder}
