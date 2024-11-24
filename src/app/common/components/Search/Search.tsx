@@ -14,7 +14,7 @@ const Search = ({ placeholder, onChange }: SearchType) => {
       />
       <Input
         className={
-          "bg-transparent placeholder:opacity-49 w-[100%] text-[16px] not-italic font-normal leading-normal outline-none md:text-[24px] xl:focus:border-b-gray xl:focus:border-b-[1px] xl:h-[50px] xl:focus:mb-1"
+          "bg-transparent placeholder:opacity-49 w-[100%] text-[16px] not-italic font-normal leading-normal outline-none md:text-[24px] xl:focus:border-b-gray xl:focus:border-b-[1px] xl:h-[50px] xl:focus:mb-1 caret-red"
         }
         type={"search"}
         placeholder={placeholder}

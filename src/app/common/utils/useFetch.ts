@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { MovieInfo } from "../types";
 
-const useFetch = () => {
+const useFetch = (search = "") => {
   const [movies, setMovies] = useState<MovieInfo[]>([]);
+  const [filteredMovies, setFilteredMovies] = useState<MovieInfo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
@@ -27,11 +28,15 @@ const useFetch = () => {
     fetchData();
   }, []);
 
-  return {
-    movies,
-    loading,
-    error,
-  };
+  useEffect(() => {
+    setFilteredMovies(
+      movies.filter((movie) =>
+        movie.title.toLowerCase().includes(search.toLowerCase())
+      )
+    );
+  }, [search, movies]);
+
+  return { movies, filteredMovies, loading, error };
 };
 
 export default useFetch;

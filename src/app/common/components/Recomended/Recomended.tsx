@@ -7,7 +7,7 @@ import {
 } from "../../../../../public/assets";
 import { Button } from "..";
 
-const Recomended = ({ movieData, onClick }: RecomendedTypes) => {
+const Recomended = ({ movieData, onClick = () => {} }: RecomendedTypes) => {
   const filteredMovies = movieData.filter((movie) => movie.id >= 6);
 
   if (filteredMovies.length === 0) {
@@ -32,12 +32,16 @@ const Recomended = ({ movieData, onClick }: RecomendedTypes) => {
                   className="w-full h-full object-cover"
                 />
                 <Button
-                  className={"absolute top-[16px] right-[16px] z-[9999]"}
-                  onClick={onClick}
+                  className={
+                    "absolute z-20 top-[16px] right-[16px] hover:scale-110 transition-transform duration-300"
+                  }
+                  aria-label={`Bookmark ${movie.title}`}
+                  onClick={() => onClick(movie.id)}
                 >
                   <BookmarkButtonIcon
-                    fill={movie.isBookmarked ? "#FFFFFF" : "none"}
-                    className={""}
+                    className={`fill-none ${
+                      movie.isBookmarked ? "fill-white" : "none"
+                    } transition-colors duration-300`}
                   />
                 </Button>
                 <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.5)] bg-lightgray bg-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

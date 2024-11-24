@@ -40,12 +40,12 @@ export interface MovieInfo {
 
 export interface RecomendedTypes {
   movieData: MovieInfo[];
-  onClick?: () => void;
+  onClick?: (id: number) => void;
 }
 
 export interface TrendingMovie {
   trend: MovieInfo[];
-  onClick?: () => void;
+  onClick?: (id: number) => void;
 }
 
 export interface SearchType {
@@ -57,10 +57,10 @@ export interface BookmarkType {
   movies: MovieInfo[];
   category: "Movie" | "TV Series";
   title: string;
-  onClick?: () => void;
+  onClick?: (id: number) => void;
 }
 
 export interface IconType {
-  fill: string;
+  fill?: string;
   className: string;
 }
